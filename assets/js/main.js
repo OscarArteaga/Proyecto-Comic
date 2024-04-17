@@ -77,9 +77,10 @@ function addCartClicked(event){
     var button = event.target
     var shopProducts = button.parentElement
     var title = shopProducts.getElementsByClassName('product-title')[0].innerText;
-    var price = shopProducts.getElementsByClassName('price')[0].innerText;
+    var price = shopProducts.getElementsByClassName('price')[0].innerText; 
     var productImg = shopProducts.getElementsByClassName('product')[0].src;
-    addProductToCart(title,price, productImg);
+    console.log(title, price, productImg);
+    addProductToCart(title,price, productImg); 
     updateTotal();
 }
 function addProductToCart(title, price, productImg) {

@@ -55,11 +55,17 @@ header{
     justify-content:  space-between;
     padding: 20px 0;
 }
-
+.navst{
+    background-color:  rgb(52, 0, 119);
+}
+.navstlog{
+    color: aliceblue;
+}
 .logo{
     font-size:  1.1rem;
     color: var(--text-color);
     font-weight: 400;
+    color: aliceblue;
 }
 
 #cart-icon{
@@ -150,6 +156,10 @@ header{
 .btn-buy:hover{
     background: var(--text-color);
 }
+.btncard{
+    background: var(--main-color);
+    color: var(--bg-color);
+}
 #close-cart{
     position: absolute;
     top: 1rem;
@@ -202,8 +212,6 @@ header{
     position: absolute;
     bottom: 0;
     right: 0;
-    background: var(--text-color);
-    color: var(--text-color);
     padding: 10px;
     cursor:pointer;
 }
