@@ -28,6 +28,10 @@ img{
 
 body{
    color:var(--text-color);
+   background-image: url(/assets/img/Vector4free-Pop-Art-Background-Revisi1-DP0622_generated.jpg);
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: 100%;
 }
 
 .conteiner{
@@ -49,17 +53,35 @@ header{
     z-index: 100;
 }
 
+.section-title{
+    color: white;
+}
+
 .nav{
     display: flex;
     align-items: center;
     justify-content:  space-between;
     padding: 20px 0;
 }
+
+.options a{
+    padding: 25px;
+    text-align: center;
+    justify-content: baseline;
+    align-items:center;
+    color: white;
+    text-decoration: none;
+}
+
+.options a:hover{
+    color: black;
+}
+
 .navst{
     background-color:  rgb(52, 0, 119);
 }
 .navstlog{
-    color: aliceblue;
+    color: rgb(255, 255, 255);
 }
 .logo{
     font-size:  1.1rem;
@@ -187,7 +209,10 @@ header{
     gap: 1.5rem;
 }
 .product-box{
+    color: white;
+    background-color: rgb(76, 0, 255);
     position: relative;
+    padding-bottom: 3rem;
 }
 .product-box:hover{
     padding: 10px;
@@ -217,6 +242,29 @@ header{
 }
 .add-cart:hover{
     background: hsl(249,32%,17%);
+}
+
+.moinf{
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    margin-right: 12.6rem;
+    cursor:pointer;
+}
+.moinf:hover{
+    background: hsl(249,32%,17%);
+
+}
+/*info*/
+.infimg{
+    padding-bottom: 55rem;
+    padding-right: 60rem;
+    padding-left: 3rem;
+    margin-top: 7rem;
+}
+.inftex{
+    text-align: right;
 }
 
 /* breakpoints / Marcado de respuesta*/
