@@ -266,6 +266,54 @@ header{
 .inftex{
     text-align: right;
 }
+/*formulario*/
+.inises{
+    margin-top: 10rem;
+    padding: 7%;
+    background-image: url(/assets/img/fond.webp);
+    background-color: #d6b600;
+    background-position:center;
+    background-size: 57%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: rgb(4, 63, 97);
+    border-radius: 10px;
+
+}
+.teba{
+    margin-right: 15rem;
+}
+.inises-box{
+    padding-left: 10rem;
+}
+.leini{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.regses{
+    margin-top: 10rem;
+    padding: 7%;
+    background-image: url(/assets/img/fond.webp);
+    background-color: #d6b600;
+    background-position:center;
+    background-size: 57%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: rgb(60, 4, 97);
+    border-radius: 10px;
+
+}
+.lereg{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.btn-ses{
+    background-color: rgb(52, 0, 119);
+    cursor: pointer;
+}
+.btn-ses:hover{
+    background-color: rgb(115, 8, 255);
+}
+
 
 /* breakpoints / Marcado de respuesta*/
 @media (max-width:1080px){
