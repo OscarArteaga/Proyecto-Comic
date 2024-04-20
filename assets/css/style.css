@@ -150,19 +150,6 @@ header{
     transition: transform 0.5s ease; 
 }
 
-.carousel-caption{
-    align-items: center;
-    text-align: center;
-    padding-bottom: 250px;
-}
-
-.carousel-caption h1{
-    font-size: xxx-large;
-    text-shadow: 3px 2px 0 black;
-
-
-}
-
 .carousel-item {
     width: 25%; 
     float: left; 
@@ -171,8 +158,7 @@ header{
 
 .carousel-item img {
     width: 100%; 
-    height: auto;
-    filter: blur(5px);
+    height: auto; 
 }
 
 /* Cart */
@@ -340,7 +326,6 @@ header{
 .inises{
     margin-top: 10rem;
     padding: 7%;
-    padding-bottom: 7%;
     background-image: url(/assets/img/fond.webp);
     background-color: #d6b600;
     background-position:center;
@@ -349,7 +334,7 @@ header{
     background-repeat: no-repeat;
     color: rgb(4, 63, 97);
     border-radius: 10px;
-    
+
 }
 .teba{
     margin-right: 15rem;
@@ -394,7 +379,7 @@ header{
     align-items: center;
     flex-direction: column;
 }
-  
+
 .social-icon {
     display: flex;
     justify-content: center;
@@ -403,11 +388,11 @@ header{
     margin: 10px 5px;
     flex-wrap: wrap;
 }
-  
+
 .icon-elem {
     list-style: none;
 }
-  
+
 .icon {
     color: white;
     font-size: 32px;
@@ -415,11 +400,11 @@ header{
     margin: 0 10px;
     transition: 0.5s;
 }
-  
+
 .icon:hover {
     transform: translateY(-10px);
 }
-  
+
 .menu {
     display: flex;
     justify-content: center;
@@ -428,7 +413,7 @@ header{
     margin: 10px 0;
     flex-wrap: wrap;
 }
-  
+
 .menu-elem {
     list-style: none;
 }
@@ -441,11 +426,11 @@ header{
     opacity: 0.5;
     transition: 0.3s;
 }
-  
+
 .menu-icon:hover {
     opacity: 1;
 }
-  
+
 .text {
     color: white;
     text-align: center;
@@ -453,6 +438,13 @@ header{
     margin-bottom: 10px;
     font-size: 20px;
 }
+
+.consty{
+
+    background-color: #d6b600;
+    margin-top: 15rem;
+}
+
 /* breakpoints / Marcado de respuesta*/
 @media (max-width:1080px){
     .nav{
