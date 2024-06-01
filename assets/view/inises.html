@@ -15,7 +15,7 @@
         <div class="nav conteiner">
             <a href="/assets/view/home.html" class="logo">Comics Sharingann</a>
             <div class="options">
-                <a href="#">Inicio</a>
+                <a href="/assets/view/home.html">Inicio</a>
                 <a href="/index.html">Catalogo</a>
                 <a href="/assets/view/reg.html">Registrarse</a>
                 <a href="/assets/view/inises.html">Iniciar Sesión</a>
@@ -42,23 +42,23 @@
     </div>
     </header>
     <div class="inises conteiner" >
-    <form>
+    <form id="LoginForm">
         <div class="inises-box">
         <div class="mb-3  teba ">
-          <label for="exampleInputEmail1" class="form-label leini">Email de usuario</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <label class="form-label leini">Email de usuario</label>
+          <input type="email" class="form-control" placeholder="@email.com" id="email" aria-describedby="emailHelp" required autofocus>
           <div id="emailHelp" class="form-text">Nunca compartas tu cuenta</div>
         </div>
         <div class="mb-3 teba ">
-          <label for="exampleInputPassword1" class="form-label leini">Contraseña</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
+          <label class="form-label leini">Contraseña</label>
+          <input type="password" class="form-control" id="password" required>
         </div>
         <div class="mb-3 form-check ">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
           <label class="form-check-label leini" for="exampleCheck1">Confirma</label>
         </div>
         <button type="submit" class="btn btn-primary leini btn-ses">Enviar</button>
-        <a href="reg.html">¿aun no te registras? Registrate</a>
+        <p>¿aun no te registras?<a href="reg.html">Registrate</a></p>
 
         </div>
       </form>
@@ -106,12 +106,7 @@
         </ul>
         <p class="text">@2024 | Todos los derechos reservados</p>
       </footer>
-      <script
-        type="module"
-        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-      ></script>
-      <script
-        nomodule
-        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-      ></script>
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+      <script src="/assets/js/login.js"></script>
 </body>

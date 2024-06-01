@@ -15,7 +15,7 @@
         <div class="nav conteiner">
             <a href="/assets/view/home.html" class="logo">Comics Sharingann</a>
             <div class="options">
-                <a href="#">Inicio</a>
+                <a href="/assets/view/home.html">Inicio</a>
                 <a href="/index.html">Catalogo</a>
                 <a href="/assets/view/reg.html">Registrarse</a>
                 <a href="/assets/view/inises.html">Iniciar Sesión</a>
@@ -42,38 +42,18 @@
     </div>
     </header>
     <div class="conteiner regses">
-    <form class="row g-3">
+    <form class="row g-3" id="SignupForm">
         <div class="col-md-6">
-          <label for="inputEmail4" class="form-label lereg">Email</label>
-          <input type="email" class="form-control" id="inputEmail4">
-        </div>
-        <div class="col-md-6">
-          <label for="inputPassword4" class="form-label lereg">Contraseña</label>
-          <input type="password" class="form-control" id="inputPassword4">
-        </div>
-        <div class="col-12">
-          <label for="inputAddress" class="form-label lereg">Direccion</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-        </div>
-        <div class="col-12">
-          <label for="inputAddress2" class="form-label lereg">Direccion 2</label>
-          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+          <label class="form-label">Nombre</label>
+          <input type="text" placeholder="Tulio Trivinio" id="name" required autofocus>
         </div>
         <div class="col-md-6">
-          <label for="inputCity" class="form-label lereg">Ciudad</label>
-          <input type="text" class="form-control" id="inputCity">
+          <label class="form-label lereg">Email</label>
+          <input type="email" class="form-control" placeholder="@email.com" id="email" required>
         </div>
-        <div class="col-md-4">
-          <label for="inputState" class="form-label lereg">Comuna</label>
-          <select id="inputState" class="form-select">
-            <option selected>Elige...</option>
-            <option>...</option>
-          </select>
-        </div>
-        <div class="col-md-2">
-          <label for="inputZip" class="form-label lereg">Codigo Postal</label>
-          <input type="text" class="form-control" id="inputZip">
-        </div>
+        <div class="col-md-6">
+          <label  class="form-label lereg">Contraseña</label>
+          <input type="password" class="form-control" placeholder="..." id="password" required>
         <div class="col-12">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="gridCheck">
@@ -84,7 +64,7 @@
         </div>
         <div class="col-12">
           <button type="submit" class="btn btn-primary lereg btn-ses">Ingresar</button>
-          <a href="inises.html">¿ya tienes cuenta? Inicia sesion</a>
+          <p>¿ya tienes cuenta?<a href="inises.html">Inicia sesion</a></p>
 
         </div>
       </form>
@@ -132,13 +112,8 @@
       </ul>
       <p class="text">@2024 | Todos los derechos reservados</p>
     </footer>
-    <script
-    type="module"
-    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-  ></script>
-  <script
-    nomodule
-    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-  ></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="/assets/js/signup.js"></script>
     
 </body>
