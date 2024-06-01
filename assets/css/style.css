@@ -31,62 +31,64 @@ body{
    background-image: url(/assets/img/Vector4free-Pop-Art-Background-Revisi1-DP0622_generated.jpg);
    background-repeat: no-repeat;
    background-attachment: fixed;
-   background-size: 100%;
+   background-size: cover;
+
 }
 
 .conteiner{
     max-width: 1068px;
     margin: auto;
-    width: 100%;
+    width: 100%;  
 }
+
 section{
     padding: 4rem 0 3rem;
 }
 /* Header */
-header{
-    position:fixed;
+header {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background: var(--bg-color);
-    box-shadow: 0 1px 4px hsl(0 4% 15%/ 10%) ;
+    box-shadow: 0 1px 4px hsl(0 4% 15%/ 10%);
     z-index: 100;
 }
 
-.section-title{
+.section-title {
     color: white;
 }
 
-.nav{
+.nav {
     display: flex;
     align-items: center;
-    justify-content:  space-between;
-    padding: 20px 0;
+    justify-content: space-between;
+    padding: 10px 0; 
 }
 
-.options a{
-    padding: 25px;
+.options a {
+    padding: 15px; 
     text-align: center;
     justify-content: baseline;
-    align-items:center;
+    align-items: center;
     color: white;
     text-decoration: none;
 }
 
-.options a:hover{
+.options a:hover {
     color: black;
 }
 
-.navst{
-    background-color:  rgb(52, 0, 119);
+.navst {
+    background-color: rgb(52, 0, 119);
 }
-.navstlog{
+
+.navstlog {
     color: rgb(255, 255, 255);
 }
-.logo{
-    font-size:  1.1rem;
-    color: var(--text-color);
-    font-weight: 400;
+
+.logo {
+    font-size: 1rem; 
     color: aliceblue;
 }
 
@@ -174,8 +176,7 @@ header{
     height: auto;
     filter: blur(5px);
 }
-
-/* Cart */
+/* Carrito*/
 .cart.active{
     right: 0;
 }
@@ -336,42 +337,54 @@ header{
 .inftex{
     text-align: right;
 }
+
 /*formulario*/
+.inises.conteiner{
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+    margin-top: 10rem;
+}
+
 .inises{
     margin-top: 10rem;
     padding: 7%;
     background-image: url(/assets/img/fond.webp);
     background-color: #d6b600;
-    background-position:center;
-    background-size: 57%;
+    background-position: center;
+    background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     color: rgb(4, 63, 97);
     border-radius: 10px;
+    min-height: calc(100vh - 10rem - 50px);
+}
 
-}
-.teba{
-    margin-right: 15rem;
-}
+
 .inises-box{
-    padding-left: 10rem;
+    padding-top: 5rem;
+    padding-left: 15rem;
 }
+
 .leini{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 .regses{
     margin-top: 10rem;
-    padding: 7%;
+    padding: 10%;
     background-image: url(/assets/img/fond.webp);
     background-color: #d6b600;
-    background-position:center;
-    background-size: 57%;
+    background-position: center;
+    background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     color: rgb(60, 4, 97);
     border-radius: 10px;
-
+    width: 100%;
+    min-height: calc(100vh - 10rem - 50px); 
 }
+
 .lereg{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
@@ -392,6 +405,7 @@ header{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: auto;
 }
 
 .social-icon {
@@ -454,7 +468,6 @@ header{
 }
 
 .consty{
-
     background-color: #d6b600;
     margin-top: 15rem;
 }
@@ -485,14 +498,54 @@ header{
     .cart{
         width: 320px;
     }
+    .inises.conteiner{
+        margin-top: 50%;
+    }
 }
 
-@media (max-width:360px){
+@media (max-width:767px){
     .shop{
         margin-top:  1rem !important;
     }
     .cart{
         width: 280px;
+    }
+    .inises.conteiner{
+        margin-top: 50%;
+    }
+
+    #LoginForm{
+        padding-right: 1%;
+    }
+
+    .inises-box{
+        padding-left: 5%;   
+    }
+    body{
+        margin-top: 15rem;
+    };
+    .nav {
+        flex-direction: column; 
+        padding: 10px; 
+    }
+
+    .options a {
+        padding: 10px; 
+    }
+
+    .logo {
+        font-size: 0.9rem; 
+    }
+    .carousel-inner {
+        width: 1000%; /* Ancho de la galería ajustado */
+    }
+
+    .carousel-caption {
+        padding-bottom: 30px; /* Ajuste el espacio inferior */
+    }
+
+    .carousel-caption h1 {
+        font-size: 2rem; /* Tamaño de fuente ajustado */
     }
 
 }
