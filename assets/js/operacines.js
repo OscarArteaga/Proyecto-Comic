@@ -5,20 +5,15 @@ export const generateHash = (timestamp, privateKey, publicKey) => {
 
 export const renderHeroes = (heroes) => {
     const heroesRow = document.getElementById("heroesRow");
-
-    // Conjunto para rastrear títulos já exibidos
     const seenTitles = new Set();
 
     heroes.forEach(hero => {
         const { id, title, description, thumbnail } = hero;
         const { extension, path } = thumbnail;
 
-        // Verifique se o título já foi exibido
         if (seenTitles.has(title)) {
-            return; // Pule este herói se já foi exibido
+            return; 
         }
-
-        // Adicione o título ao conjunto rastreado
         seenTitles.add(title);
 
         const productBox = document.createElement("div");

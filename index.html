@@ -21,8 +21,8 @@
               <div class="options">
                   <a href="/assets/view/home.html">Inicio</a>
                   <a href="/index.html">Catalogo</a>
-                  <a href="/assets/view/reg.html">Registrarse</a>
-                  <a href="/assets/view/inises.html">Iniciar Sesión</a>
+                  <a href="/assets/view/reg.html" id="registrarse">Registrarse</a>
+                  <a href="/assets/view/inises.html" id="iniciarsesion">Iniciar Sesión</a>
               </div>
               <i class="bi bi-bag navstlog" id="cart-icon"></i>
               <div class="cart">
@@ -46,10 +46,18 @@
       </div>
     </header>
 
-
-  <!-- Shop -->
     <section class="shop container">
-      <h2 class="section-title">Tienda de Historietas</h2>
+      <h2 class="section-title">Elige un comics</h2>
+      <div class="row listButtons">
+        <button class="btn" id="cargaDC">DC Comics</button>
+        <button class="btn" id="cargaMarvel">Marvel</button>
+      </div>
+      
+      <div class="shop-content" id="comics"></div>
+      </div>
+    </section>
+
+    <section class="shop container marvelShop">
       <div class="shop-content" id="heroesRow">
       </div>
     </section>
@@ -98,6 +106,7 @@
         </ul>
         <p class="text">@2024 | Todos los derechos reservados</p>
       </footer>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
       <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -111,5 +120,7 @@
     <!-- <script src="/assets/js/main.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script type="module" src="./assets/js/index.js"></script>
+        <script type="module" src="./assets/js/getDataDC.js"></script>
+              <script src="/assets/js/login.js"></script>
 </body>
 </html>

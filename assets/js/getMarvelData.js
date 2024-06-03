@@ -22,3 +22,21 @@ export const getMarvelData = (offset) => {
     });
 
 }
+
+document.querySelectorAll('.listButtons button').forEach(button => {
+    button.addEventListener('click', function() {
+        const isMarvel = this.id === 'cargaMarvel';
+        
+        const heroesToShow = isMarvel ? '#heroesRow .product-box' : '#comics .product-box';
+        const heroesToHide = isMarvel ? '#comics .product-box' : '#heroesRow .product-box';
+
+        document.querySelectorAll(heroesToShow).forEach(hero => hero.style.display = 'block');
+        document.querySelectorAll(heroesToHide).forEach(hero => hero.style.display = 'none');
+
+        if (isMarvel) {
+            document.querySelector('.marvelShop').style.marginTop = '-100px';
+        }
+    });
+});
+
+
