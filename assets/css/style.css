@@ -411,6 +411,30 @@ header {
 .lereg {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+.boleta{
+  margin-top: 10rem;
+  padding: 10%;
+  background-image: url(/assets/img/fond.webp);
+  background-color: #d6b600;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: rgb(60, 4, 97);
+  border-radius: 10px;
+  width: 100%;
+  min-height: calc(100vh - 10rem - 50px);
+}
+.boleta h1{
+  text-align: center;
+}
+.container-button{
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  display: flex;
+}
+
 .btn-ses {
   background-color: rgb(52, 0, 119);
   cursor: pointer;

@@ -1,3 +1,4 @@
+// Funciones existentes
 export const generateHash = (timestamp, privateKey, publicKey) => {
     const hash = CryptoJS.MD5(timestamp + privateKey + publicKey).toString();
     return hash;
@@ -98,15 +99,6 @@ function ready() {
     document.getElementsByClassName('btn-buy')[0].addEventListener('click', buyButtonClicked);
 }
 
-function buyButtonClicked() {
-    alert('Tu orden está lista');
-    var cartContent = document.getElementsByClassName('cart-content')[0];
-    while (cartContent.hasChildNodes()) {
-        cartContent.removeChild(cartContent.firstChild);
-    }
-    updateTotal();
-}
-
 function removeCartItem(event) {
     var buttonClicked = event.target;
     buttonClicked.parentElement.remove();
@@ -201,9 +193,72 @@ function updateTotal() {
     var totalPriceElement = document.getElementsByClassName('total-price')[0];
 
     if (!totalPriceElement) {
-        console.error('Elemento .total-price No fue encontrado');
+        console.error('Elemento .total-price no fue encontrado');
         return;
     }
 
     totalPriceElement.innerText = '$' + total;
+}
+
+function buyButtonClicked() {
+    alert('Tu orden está lista');
+    createBoleta();
+    var cartContent = document.getElementsByClassName('cart-content')[0];
+    while (cartContent.hasChildNodes()) {
+        cartContent.removeChild(cartContent.firstChild);
+    }
+    updateTotal();
+    window.location.href = '/assets/view/boleta.html'
+}
+
+// Nueva función para crear la boleta
+function createBoleta() {
+    var cartItems = document.getElementsByClassName('cart-content')[0];
+    if (!cartItems) {
+        console.error('Elemento .cart-content no encontrado');
+        return;
+    }
+
+    var cartBoxes = cartItems.getElementsByClassName('cart-box');
+    var boleta = [];
+
+    for (var i = 0; i < cartBoxes.length; i++) {
+        var cartBox = cartBoxes[i];
+        var titleElement = cartBox.getElementsByClassName('cart-product-title')[0];
+        var priceElement = cartBox.getElementsByClassName('cart-price')[0];
+        var quantityElement = cartBox.getElementsByClassName('cart-quantity')[0];
+        var imgElement = cartBox.getElementsByClassName('cart-img')[0];
+
+        if (!titleElement || !priceElement || !quantityElement || !imgElement) {
+            console.error(`Elemento no encontrado en cart-box index ${i}`);
+            continue;
+        }
+
+        var title = titleElement.innerText;
+        var price = priceElement.innerText;
+        var quantity = quantityElement.value;
+        var imgSrc = imgElement.src;
+
+        boleta.push({
+            title: title,
+            price: price,
+            quantity: quantity,
+            imgSrc: imgSrc
+        });
+    }
+
+    var totalPriceElement = document.getElementsByClassName('total-price')[0];
+    if (!totalPriceElement) {
+        console.error('Elemento .total-price no encontrado');
+        return;
+    }
+    var totalPrice = totalPriceElement.innerText;
+
+    var boletaData = {
+        items: boleta,
+        totalPrice: totalPrice
+    };
+
+    localStorage.setItem('boleta', JSON.stringify(boletaData));
+    alert('Compra realizada! Boleta generada.');
 }
