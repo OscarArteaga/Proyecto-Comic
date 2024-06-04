@@ -37,7 +37,7 @@ export const renderHeroes = (heroes) => {
         stock.textContent = "Comic en stock: 10";
 
         const moreInfoLink = document.createElement("a");
-        moreInfoLink.href = `/assets/view/comic${id}.html`;
+        moreInfoLink.href = `/assets/view/comic-details.html?id=${id}`;
         moreInfoLink.classList.add("bi", "bi-box-arrow-in-down-left", "moinf", "btncard");
 
         const addToCartIcon = document.createElement("i");
@@ -262,3 +262,4 @@ function createBoleta() {
     localStorage.setItem('boleta', JSON.stringify(boletaData));
     alert('Compra realizada! Boleta generada.');
 }
+

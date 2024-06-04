@@ -610,6 +610,79 @@ header {
   margin-top: 15rem;
 }
 
+/* Vistas de comics*/
+
+.comic-detail.conteiner {
+  max-width: 1068px;
+  margin: auto;
+  width: 100%;
+  margin-top: 15rem;
+}
+
+/* Estilos para la sección de detalles del cómic */
+.comic-detail {
+  width: 80%;
+  max-width: 800px; /* Ancho máximo del contenedor */
+  background-color: #fff; /* Color de fondo */
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.comic-info {
+  display: flex;
+  gap: 20px;
+}
+
+.comic-image img {
+  max-width: 200px; /* Ajusta el tamaño de la imagen según tu preferencia */
+  height: auto;
+  border-radius: 8px; /* Borde redondeado para la imagen */
+}
+
+.comic-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.comic-details h1 {
+  font-size: 1.5rem; /* Tamaño del título del cómic */
+  margin: 0;
+}
+
+.comic-details .price {
+  font-size: 1.2rem; /* Tamaño del precio */
+  color: green; /* Color del precio, ajusta según tu diseño */
+}
+
+.comic-details p {
+  font-size: 1rem; /* Tamaño del texto de la descripción */
+  margin: 0;
+}
+
+.btn-back {
+  background-color: #007bff; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none; /* Quitar subrayado del enlace dentro del botón */
+  display: inline-block;
+  border-radius: 4px; /* Borde redondeado para el botón */
+  margin: 15%;
+  margin-left: 50%;
+}
+
+.btn-back:hover {
+  background-color: #0056b3; /* Color de fondo del botón al pasar el mouse */
+}
+
+.btn-back a {
+  color: white; /* Color del texto del enlace dentro del botón */
+  text-decoration: none; /* Quitar subrayado del enlace */
+}
+
 /* breakpoints / Marcado de respuesta*/
 @media (max-width: 1080px) {
   .nav {

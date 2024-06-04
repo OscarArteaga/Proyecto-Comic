@@ -50,17 +50,23 @@
     </div>
     </header>
 <main>
-    <div class="conteiner-img">
-        <img src="/assets/img/incre_ble_hulk_02.webp" alt="imagen-comic">
-        <div class="description">
-            <h1>Comic EL INCREÍBLE HULK #02/132</h1>
-            <p>Precio: $70</p>
-            <p>Descripcion: Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus fugit saepe cum magnam. 
-                Facere totam non laborum, iure, aspernatur sit assumenda maxime veritatis eveniet 
-                odio natus quo fugit obcaecati sint.</p>
-            <button type="button" class="btn btn-danger">Agregar al Carrito</button>
+
+  <div class="comic-detail conteiner">
+    <div class="comic-info">
+        <div class="comic-image">
+            <img id="comic-image" src="" alt="Comic Image">
+        </div>
+        <div class="comic-details">
+            <h1 id="comic-title"></h1>
+            <span class="price" id="comic-price"></span>
+            <p id="comic-description"></p>
+            <button id="back-link" class="btn-back">
+                <a href="/index.html">Volver</a>
+            </button>
         </div>
     </div>
+</div>
+
     <br>
     <footer class="footer">
         <ul class="social-icon">
@@ -113,6 +119,9 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script type="module" src="/assets/js/getMarvelData.js"></script>
+    <script type="module" src="/assets/js/getDataDC.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 </main>
 </body>
 </html>

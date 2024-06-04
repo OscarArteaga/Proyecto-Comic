@@ -1,5 +1,6 @@
 [
-    {
+    {   
+        "id" : 1,
         "name": "Mujer Maravilla/Flash Vol 01",
         "image": "https://www.comix.com.br/media/catalog/product/cache/d02ee9b55c538888fd1345390b9b7022/m/a/maravilhaflash.jpg",
         "price": "$23,72"
