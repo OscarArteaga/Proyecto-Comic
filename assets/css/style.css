@@ -622,7 +622,7 @@ header {
 /* Estilos para la sección de detalles del cómic */
 .comic-detail {
   width: 80%;
-  max-width: 800px; /* Ancho máximo del contenedor */
+  max-width: 801px; /* Ancho máximo del contenedor */
   background-color: #fff; /* Color de fondo */
   padding: 25px;
   border-radius: 8px;
