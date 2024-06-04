@@ -503,7 +503,7 @@ header {
 .lereg {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-.boleta{
+.boleta {
   margin-top: 10rem;
   padding: 10%;
   background-image: url(/assets/img/fond.webp);
@@ -517,10 +517,10 @@ header {
   width: 100%;
   min-height: calc(100vh - 10rem - 50px);
 }
-.boleta h1{
+.boleta h1 {
   text-align: center;
 }
-.container-button{
+.container-button {
   align-items: center;
   justify-content: center;
   position: absolute;

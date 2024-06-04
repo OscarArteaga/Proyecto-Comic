@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+¿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -43,27 +43,29 @@
     </header>
 
 <div class="container main consty">
-    <h1>Panel de Reclamos</h1>
-    <form id="reclamoForm" class="mt-4">
-        <div class="mb-3">
-            <label for="name" class="form-label">Nombre:</label>
-            <input type="text" class="form-control" id="name" name="name" required>
-        </div>
-        <div class="mb-3">
-            <label for="email" class="form-label">Correo Electrónico:</label>
-            <input type="email" class="form-control" id="email" name="email" required>
-        </div>
-        <div class="mb-3">
-            <label for="subject" class="form-label">Asunto:</label>
-            <input type="text" class="form-control" id="subject" name="subject" required>
-        </div>
-        <div class="mb-3">
-            <label for="message" class="form-label">Mensaje:</label>
-            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" id="enviarReclamo">Enviar Reclamo</button>
-    </form>
+  <h1>Panel de Reclamos</h1>
+  <form id="reclamoForm" class="mt-4" action="https://formsubmit.co/oscarvizcaya9@gmail.com" method="POST">
+    <div class="mb-3">
+      <label for="name" class="form-label">Nombre:</label>
+      <input type="text" class="form-control" name="name" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Correo Electrónico:</label>
+      <input type="email" class="form-control" name="email" required>
+    </div>
+    <div class="mb-3">
+      <label for="subject" class="form-label">Asunto:</label>
+      <input type="text" class="form-control" name="subject" required>
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">Mensaje:</label>
+      <textarea class="form-control" name="message" rows="5"></textarea>
+    </div> 
+    <input type="hidden" name="_next" value="http://127.0.0.1:5503/assets/view/email-sucess.html">
+    <button type="submit" class="btn btn-primary" >Enviar Reclamo</button>
+  </form>
 </div>
+
 
 <footer class="footer">
     <ul class="social-icon">
@@ -113,35 +115,27 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
 <!-- Link de Js -->
 <script src="/assets/js/login.js"></script>
-
 <script>
-  // Captura el botón de enviar reclamo
-  const enviarReclamoBtn = document.getElementById('enviarReclamo');
+  // Captura el formulario de reclamo
+  const reclamoForm = document.getElementById('reclamoForm');
 
-  // Añade un listener para el evento 'click' del botón
-  enviarReclamoBtn.addEventListener('click', function(event) {
+  // Añade un listener para el evento 'submit' del formulario
+  reclamoForm.addEventListener('submit', function(event) {
       // Previene el comportamiento por defecto de enviar el formulario
       event.preventDefault();
 
-      // Captura los campos del formulario
-      const name = document.getElementById('name');
-      const email = document.getElementById('email');
-      const subject = document.getElementById('subject');
-      const message = document.getElementById('message');
-
-      // Verifica si algún campo está vacío
-      if (name.value.trim() === '' || email.value.trim() === '' || subject.value.trim() === '' || message.value.trim() === '') {
-          // Muestra una alerta si algún campo está vacío
-          alert('Por favor, completa todos los campos del reclamo.');
-      } else {
-          // Muestra una alerta de que el reclamo fue enviado con éxito
-          alert('¡Reclamo enviado con éxito!');
-
-          // Borra los datos del formulario
-          name.value = '';
-          email.value = '';
-          subject.value = '';
-          message.value = '';
-      }
+      // Realiza el envío del formulario
+      enviarReclamo();
   });
+
+  // Función para enviar el reclamo
+  function enviarReclamo() {
+      // Realiza el envío del formulario
+      reclamoForm.submit();
+
+      // Borra los datos del formulario después de 1 segundo
+      setTimeout(function() {
+          reclamoForm.reset();
+      }, 1000);
+  }
 </script>
