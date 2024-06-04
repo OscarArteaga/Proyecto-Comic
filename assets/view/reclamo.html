@@ -115,15 +115,33 @@
 <script src="/assets/js/login.js"></script>
 
 <script>
-    // Captura el botón de enviar reclamo
-    const enviarReclamoBtn = document.getElementById('enviarReclamo');
+  // Captura el botón de enviar reclamo
+  const enviarReclamoBtn = document.getElementById('enviarReclamo');
 
-    // Añade un listener para el evento 'click' del botón
-    enviarReclamoBtn.addEventListener('click', function(event) {
-        // Muestra una alerta cuando el botón es presionado
-        alert('¡Reclamo enviado con éxito!');
-    });
+  // Añade un listener para el evento 'click' del botón
+  enviarReclamoBtn.addEventListener('click', function(event) {
+      // Previene el comportamiento por defecto de enviar el formulario
+      event.preventDefault();
+
+      // Captura los campos del formulario
+      const name = document.getElementById('name');
+      const email = document.getElementById('email');
+      const subject = document.getElementById('subject');
+      const message = document.getElementById('message');
+
+      // Verifica si algún campo está vacío
+      if (name.value.trim() === '' || email.value.trim() === '' || subject.value.trim() === '' || message.value.trim() === '') {
+          // Muestra una alerta si algún campo está vacío
+          alert('Por favor, completa todos los campos del reclamo.');
+      } else {
+          // Muestra una alerta de que el reclamo fue enviado con éxito
+          alert('¡Reclamo enviado con éxito!');
+
+          // Borra los datos del formulario
+          name.value = '';
+          email.value = '';
+          subject.value = '';
+          message.value = '';
+      }
+  });
 </script>
-
-</body>
-</html>
