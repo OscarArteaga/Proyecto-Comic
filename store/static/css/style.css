@@ -28,7 +28,7 @@ img {
 
 body {
   color: var(--text-color);
-  background-image: url(/assets/img/Vector4free-Pop-Art-Background-Revisi1-DP0622_generated.jpg);
+  background-image: url(../img/Vector4free-Pop-Art-Background-Revisi1-DP0622_generated.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -465,7 +465,7 @@ header {
 .inises {
   margin-top: 10rem;
   padding: 7%;
-  background-image: url(/assets/img/fond.webp);
+  background-image: url(../img/fond.webp);
   background-color: #d6b600;
   background-position: center;
   background-size: cover;
@@ -488,7 +488,7 @@ header {
 .regses {
   margin-top: 10rem;
   padding: 10%;
-  background-image: url(/assets/img/fond.webp);
+  background-image: url(../img/fond.webp);
   background-color: #d6b600;
   background-position: center;
   background-size: cover;
@@ -503,10 +503,11 @@ header {
 .lereg {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+
 .boleta {
   margin-top: 10rem;
   padding: 10%;
-  background-image: url(/assets/img/fond.webp);
+  background-image: url(../img/fond.webp);
   background-color: #d6b600;
   background-position: center;
   background-size: cover;

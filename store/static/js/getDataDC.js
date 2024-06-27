@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', loadComics);
 
 function loadComics() {
-    fetch('./assets/js/listComics.json')
+    fetch('/static/js/listComics.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');

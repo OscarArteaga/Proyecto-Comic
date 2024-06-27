@@ -208,7 +208,7 @@ function buyButtonClicked() {
         cartContent.removeChild(cartContent.firstChild);
     }
     updateTotal();
-    window.location.href = '/assets/view/boleta.html'
+    window.location.href = '/boleta/'
 }
 
 // Nueva función para crear la boleta

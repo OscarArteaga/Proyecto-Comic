@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <title>Document</title>
@@ -13,12 +14,12 @@
     <header>
     <div class="navst">
         <div class="nav conteiner">
-            <a href="/assets/view/home.html" class="logo">Comics Sharingann</a>
+            <a href="{% url 'home' %}" class="logo">Comics Sharingann</a>
             <div class="options">
-                <a href="/assets/view/home.html">Inicio</a>
-                <a href="/index.html">Catalogo</a>
-                <a href="/assets/view/reg.html" id="registrarse">Registrarse</a>
-                <a href="/assets/view/inises.html" id="iniciarsesion">Iniciar Sesión</a>
+                <a href="{% url  'home' %}">Inicio</a>
+                <a href="{% url  'index' %}">Catalogo</a>
+                <a href="{% url  'registro' %}" id="registrarse">Registrarse</a>
+                <a href="{% url  'inicio' %}" id="iniciarsesion">Iniciar Sesión</a>
             </div>
             <i class="bi bi-bag navstlog" id="cart-icon"></i>
             <div class="cart">
@@ -45,13 +46,13 @@
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="/assets/img/carrusel01.jpg" class="d-block w-100" alt="...">
+            <img src="{% static 'img/carrusel01.jpg' %}" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="/assets/img/carrusel02.jpeg" class="d-block w-100" alt="...">
+            <img src="{% static 'img/carrusel02.jpeg' %}" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="/assets/img/carrusel03.jpg" class="d-block w-100" alt="...">
+            <img src="{% static 'img/carrusel03.jpg' %}" class="d-block w-100" alt="...">
           </div>
         </div>
         <div class="carousel-caption">
@@ -93,19 +94,19 @@
         </ul>
         <ul class="menu">
           <li class="menu-elem">
-            <a href="/assets/view/home.html" class="menu-icon"> Inicio </a>
+            <a href="{% url  'home' %}" class="menu-icon"> Inicio </a>
           </li>
           <li class="menu-elem">
-            <a href="/index.html" class="menu-icon"> Coleccion </a>
+            <a href="{% url  'index' %}" class="menu-icon"> Coleccion </a>
           </li>
           <li class="menu-elem">
-            <a href="/assets/view/contac.html" class="menu-icon"> Contacto </a>
+            <a href="{% url  'contacto' %}" class="menu-icon"> Contacto </a>
           </li>
           <li class="menu-elem">
-            <a href="/assets/view/reclamo.html" class="menu-icon"> Reclamo </a>
+            <a href="{% url  'reclamos' %}" class="menu-icon"> Reclamo </a>
           </li>
           <li class="menu-elem">
-            <a href="/assets/view/sobnos.html" class="menu-icon"> Sobre Nosotros </a>
+            <a href="{% url  'sobreNosotros' %}" class="menu-icon"> Sobre Nosotros </a>
           </li>
         </ul>
         <p class="text">@2024 | Todos los derechos reservados</p>
@@ -120,6 +121,6 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
     <!-- Link de Js -->
-    <script src="/assets/js/login.js"></script>
+    <script src="{% static 'js/login.js' %}"></script>
 </body>
 </html>
