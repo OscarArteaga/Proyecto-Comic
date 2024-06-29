@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 localStorage.setItem('isLoggedIn', 'true');
                 localStorage.setItem('userName', ValidUser.name);
                 checkLoginStatus();
-                window.location.href = 'home.html';
+                window.location.href = '/index/';
             }
         });
     }

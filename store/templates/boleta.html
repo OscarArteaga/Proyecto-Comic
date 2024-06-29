@@ -13,12 +13,19 @@
     <header>
         <div class="navst">
             <div class="nav container">
-                <a href="{% url 'home' %}" class="logo">Comics Sharingann</a>
+                <a href="{% url 'index' %}" class="logo">Comics Sharingann</a>
                 <div class="options">
-                    <a href="{% url  'home' %}">Inicio</a>
-                    <a href="{% url  'index' %}">Catalogo</a>
+                    <a href="{% url  'index' %}">Inicio</a>
+                    <a href="{% url  'home' %}">Catalogo</a>
+                    {% if user.is_authenticated %}
+                    <a href="#">Bienvenido, {{ user.username }}</a>
+                    {% else %}
+                      <a href="{% url 'login' %}">Iniciar Sesión</a>
+    
                     <a href="{% url  'registro' %}" id="registrarse">Registrarse</a>
-                    <a href="{% url  'inicio' %}" id="iniciarsesion">Iniciar Sesión</a>
+                    {% endif %}
+                    <a  href="{% url 'logout' %}">cerrar session</a>
+    
                 </div>
             </div>
         </div>
@@ -32,7 +39,7 @@
         </div>
         </main>
         <section>
-            <button type="submit" class="btn btn-primary btn-ses" id="logout">Cerrar session</button>
+            <a class="btn btn-primary btn-ses" id="logout" href="{% url 'logout' %}">Cerrar session</a>
         </section>
     </div>
 
@@ -61,10 +68,10 @@
         </ul>
         <ul class="menu">
             <li class="menu-elem">
-                <a href="{% url  'home' %}" class="menu-icon">Inicio</a>
+                <a href="{% url  'index' %}" class="menu-icon">Inicio</a>
             </li>
             <li class="menu-elem">
-                <a href="{% url  'index' %}" class="menu-icon">Colección</a>
+                <a href="{% url  'home' %}" class="menu-icon">Colección</a>
             </li>
             <li class="menu-elem">
                 <a href="{% url  'contacto' %}" class="menu-icon">Contacto</a>
